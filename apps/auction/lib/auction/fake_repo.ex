@@ -4,22 +4,16 @@ defmodule Auction.FakeRepo do
   @items [
     %Item{
       id: 1,
-      title: "My first item",
-      description: "A tasty item sure to please",
-      ends_at: ~N[2020-01-01 00:00:00]
+      title: "Top Gun: The Musical",
+      description: "The most explosive soundtrack you've ever witnessed.",
+      ends_at: ~N[2021-09-25 05:22:29]
     },
     %Item{
       id: 2,
-      title: "WarGames Bluray",
-      description: "The best computer movie of all time, now on Bluray!",
-      ends_at: ~N[2018-10-15 13:39:35]
+      title: "Red Umbrella",
+      description: "Keeps you dry and stylish!",
+      ends_at: DateTime.from_naive!(~N[2021-08-22 11:43:39], "Etc/UTC")
     },
-    %Item{
-      id: 3,
-      title: "U2 - Achtung Baby on CD",
-      description: "The sound of 4 men chopping down The Joshua Tree",
-      ends_at: ~N[2018-11-05 03:12:29]
-    }
   ]
 
   def all(Item), do: @items

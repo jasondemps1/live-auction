@@ -12,6 +12,9 @@ import Config
 config :auction_web,
   generators: [context_app: false]
 
+# Tell Ecto about our Repo
+config :auction, ecto_repos: [Auction.Repo]
+
 # Configures the endpoint
 config :auction_web, AuctionWeb.Endpoint,
   url: [host: "localhost"],
@@ -19,6 +22,14 @@ config :auction_web, AuctionWeb.Endpoint,
   render_errors: [view: AuctionWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: AuctionWeb.PubSub,
   live_view: [signing_salt: "JaO2/Y1f"]
+
+
+config :auction, Auction.Repo,
+  database: "auction",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  port: "5432"
 
 # Sample configuration:
 #
